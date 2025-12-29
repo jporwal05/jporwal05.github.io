@@ -89,8 +89,21 @@ footer {
   color: #555;
 }
 
+/* ---------- Print Instructions ---------- */
+.print-instructions {
+  margin: 16px 0;
+  padding: 10px 14px;
+  font-size: 13px;
+  background: #f5f7fa;
+  border-left: 4px solid #0056b3;
+  color: #333;
+}
+
 /* ---------- Print Styles ---------- */
 @media print {
+  .print-instructions {
+    display: none;
+  }
   body {
     margin: 18mm;
     font-size: 13.5px;
@@ -126,4 +139,5 @@ footer {
     page-break-inside: auto;
   }
 }
+
 
