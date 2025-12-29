@@ -92,8 +92,9 @@ footer {
 /* ---------- Print Styles ---------- */
 @media print {
   body {
-    margin: 20mm;
-    font-size: 14px;
+    margin: 18mm;
+    font-size: 13.5px;
+    line-height: 1.45;
   }
 
   a {
@@ -101,15 +102,28 @@ footer {
     text-decoration: none;
   }
 
-  h3 {
+  h3, h4 {
     page-break-after: avoid;
   }
 
-  ul, p {
-    page-break-inside: avoid;
+  h3 {
+    margin-top: 24px;
+  }
+
+  ul {
+    padding-left: 18px;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  p {
+    margin: 4px 0;
   }
 
   section {
-    page-break-inside: avoid;
+    page-break-inside: auto;
   }
 }
+
