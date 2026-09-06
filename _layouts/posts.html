@@ -2,7 +2,34 @@
 layout: default
 ---
 <article>
-  <h1>{{ page.title }}</h1>
-  <p>{{ page.date | date: "%B %d, %Y" }}</p>
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      By {{ page.author | default: "Author" }} | 
+      {{ page.date | date: "%b %d, %Y" }}
+    </p>
+    {% if page.image %}
+      <img src="{{ page.image }}" alt="Post hero">
+    {% endif %}
+  </header>
+
+  <div class="tags">
+    {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+    {% endfor %}
+  </div>
+
   {{ content }}
+
+  <footer>
+    <p>Categories: {% for cat in page.categories %}{{ cat }}{% endfor %}</p>
+  </footer>
 </article>
+
+<!-- Previous/Next post links -->
+{% if page.previous %}
+  <a href="{{ page.previous.url }}">← {{ page.previous.title }}</a>
+{% endif %}
+{% if page.next %}
+  <a href="{{ page.next.url }}">{{ page.next.title }} →</a>
+{% endif %}
