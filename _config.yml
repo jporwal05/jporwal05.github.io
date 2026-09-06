@@ -1,0 +1,20 @@
+title: Your Name
+description: Resume & Blog
+url: https://jporwal05.github.io
+baseurl: ""
+
+collections:
+  posts:
+    output: true
+    permalink: /blog/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      published: true
+
+plugins:
+  - jekyll-feed
