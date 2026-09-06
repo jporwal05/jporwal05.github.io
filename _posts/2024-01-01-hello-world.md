@@ -1,7 +1,7 @@
 ---
 title: Hello World
 date: 2024-01-01
-published: false
+published: true
 ---
 
 Your post content here.
