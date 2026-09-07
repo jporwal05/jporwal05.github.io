@@ -9,7 +9,6 @@ collections:
   posts:
     output: true
     permalink: /blog/:slug/
-    remote_theme: pages-themes/midnight@v0.2.0
 
 defaults:
   - scope:
